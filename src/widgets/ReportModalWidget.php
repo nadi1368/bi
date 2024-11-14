@@ -1,6 +1,6 @@
 <?php
 
-namespace ziaadini\bidashboard\widgets;
+use backend\assets\BiAssets;
 
 use Yii;
 use app\models\UserModel;
