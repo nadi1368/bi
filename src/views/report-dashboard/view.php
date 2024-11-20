@@ -125,7 +125,8 @@ $this->registerJs($script);
                     <?= $this->render('box_chart', [
                         'box' => $box,
                         'boxesWithAlert' => $boxesWithAlert,
-                        'boxesWithFiredAlert' => $boxesWithFiredAlert
+                        'boxesWithFiredAlert' => $boxesWithFiredAlert,
+                        'boxesWithFiringAlert' => $boxesWithFiringAlert
                     ]); ?>
                     <?php Pjax::end(); ?>
                 <?php endforeach; ?>
@@ -149,7 +150,8 @@ $this->registerJs($script);
                 <?= $this->render('box_table', [
                     'box' => $box,
                     'boxesWithAlert' => $boxesWithAlert,
-                    'boxesWithFiredAlert' => $boxesWithFiredAlert
+                    'boxesWithFiredAlert' => $boxesWithFiredAlert,
+                    'boxesWithFiringAlert' => $boxesWithFiringAlert
                 ]) ?>
                 <?php Pjax::end(); ?>
             <?php endforeach; ?>
