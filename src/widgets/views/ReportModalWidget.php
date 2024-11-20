@@ -2,7 +2,7 @@
 
 namespace ziaadini\bidashboard\widgets\views;
 
-use ziaadini\bidashboard\BiAssets;
+use backend\assets\BiAssets;
 use Yii;
 use yii\bootstrap4\Modal;
 use yii\helpers\Url;
