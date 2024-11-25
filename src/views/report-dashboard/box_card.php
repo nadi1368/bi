@@ -110,7 +110,7 @@ $pdate = Yii::$app->pdate;
                             'aria-label' => Yii::t('yii', 'Update Box'),
                             'data-reload-pjax-container' => 'p-jax-report-dashboard-view',
                             'data-pjax' => '0',
-                            'data-url' => Url::to(['/bidashboard/report-box/run-box', 'id' => $box->id, 'year' => $box->lastDateSet['year'], 'month' => $box->lastDateSet['month'], 'day' => $box->lastDateSet['day']]),
+                            'data-url' => Url::to(['report-box/run-box', 'id' => $box->id, 'year' => $box->lastDateSet['year'], 'month' => $box->lastDateSet['month'], 'day' => $box->lastDateSet['day']]),
                             'class' => "p-jax-btn d-flex",
                             'data-title' => Yii::t('biDashboard', 'Update Box'),
                             'data-toggle' => 'tooltip',

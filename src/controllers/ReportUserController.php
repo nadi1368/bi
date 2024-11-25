@@ -3,18 +3,16 @@
 namespace ziaadini\bidashboard\controllers;
 
 
-use ziaadini\bidashboard\helpers\CoreHelper;
 use ziaadini\bidashboard\models\ReportAlert;
 use ziaadini\bidashboard\models\ReportUser;
 use ziaadini\bidashboard\models\ReportUserSearch;
 use ziaadini\bidashboard\traits\AjaxValidationTrait;
 use ziaadini\bidashboard\traits\CoreTrait;
-use yii\base\Model;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
-use yii\web\Response;
 use Yii;
+use yii\web\NotFoundHttpException;
 
 class ReportUserController extends Controller
 {

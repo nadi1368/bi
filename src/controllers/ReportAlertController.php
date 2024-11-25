@@ -20,6 +20,8 @@ use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\Response;
 use Yii;
+use yii\bootstrap4\Html;
+use yii\web\NotFoundHttpException;
 
 class ReportAlertController extends Controller
 {
@@ -150,10 +152,11 @@ class ReportAlertController extends Controller
 
                             if (!$alertUser->save()) {
                                 $transaction->rollBack();
-                                Yii::error($e->getMessage() . PHP_EOL . $e->getTraceAsString(), Yii::$app->controller->id . '/' . Yii::$app->controller->action->id);
+                                $error_message = Html::errorSummary($alertUser);
+                                Yii::error($error_message, Yii::$app->controller->id . '/' . Yii::$app->controller->action->id);
                                 return $this->asJson([
                                     'status' => false,
-                                    'message' => $e->getMessage(),
+                                    'message' => $error_message,
                                 ]);
                             }
                         }
@@ -222,10 +225,11 @@ class ReportAlertController extends Controller
 
                             if (!$alertUser->save()) {
                                 $transaction->rollBack();
-                                Yii::error($e->getMessage() . PHP_EOL . $e->getTraceAsString(), Yii::$app->controller->id . '/' . Yii::$app->controller->action->id);
+                                $error_message = Html::errorSummary($alertUser);
+                                Yii::error($error_message, Yii::$app->controller->id . '/' . Yii::$app->controller->action->id);
                                 return $this->asJson([
                                     'status' => false,
-                                    'message' => $e->getMessage(),
+                                    'message' => $error_message,
                                 ]);
                             }
                         }

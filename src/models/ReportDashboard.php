@@ -60,6 +60,7 @@ class ReportDashboard extends ActiveRecord
             [['title', 'description', 'slave_id'], 'required'],
             [['status', 'daily_update', 'created_at', 'updated_at', 'deleted_at', 'updated_by', 'created_by', 'slave_id'], 'integer'],
             [['title'], 'string', 'max' => 128],
+            [['status'], 'default', 'value' => self::STATUS_ACTIVE],
             [['description'], 'string', 'max' => 255]
         ];
     }

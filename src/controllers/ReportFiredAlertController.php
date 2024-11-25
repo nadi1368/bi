@@ -2,22 +2,17 @@
 
 namespace ziaadini\bidashboard\controllers;
 
-use common\models\BaseModel;
 use ziaadini\bidashboard\models\ReportAlert;
 use ziaadini\bidashboard\models\ReportFiredAlert;
 use ziaadini\bidashboard\models\ReportFiredAlertSearch;
-use ziaadini\bidashboard\models\ReportBaseModel;
-use ziaadini\bidashboard\models\ReportWidget;
 use ziaadini\bidashboard\traits\AjaxValidationTrait;
 use ziaadini\bidashboard\traits\CoreTrait;
-use yii\helpers\ArrayHelper;
-use yii\base\Model;
-use yii\db\Exception;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\Response;
 use Yii;
+use yii\web\NotFoundHttpException;
 
 class ReportFiredAlertController extends Controller
 {
@@ -196,7 +191,7 @@ class ReportFiredAlertController extends Controller
     }
 
 
-    protected function findModel(int $id): ReportAlert
+    protected function findModel(int $id): ?ReportFiredAlert
     {
         if (($model = ReportFiredAlert::findOne(['id' => $id])) !== null) {
             return $model;

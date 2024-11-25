@@ -2,8 +2,6 @@
 
 namespace ziaadini\bidashboard\controllers;
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use ziaadini\bidashboard\components\ExcelReport;
 use ziaadini\bidashboard\helpers\CoreHelper;
 use ziaadini\bidashboard\models\ReportPage;
@@ -16,7 +14,6 @@ use ziaadini\bidashboard\traits\CoreTrait;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
-use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;

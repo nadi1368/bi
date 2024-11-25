@@ -2,7 +2,7 @@
 
 namespace ziaadini\bidashboard\controllers;
 
-use ziaadini\bidashboard\models\ReportAlert;
+use Exception;
 use ziaadini\bidashboard\models\ReportBox;
 use ziaadini\bidashboard\models\ReportBoxWidgets;
 use ziaadini\bidashboard\models\ReportWidget;
@@ -16,6 +16,7 @@ use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\Response;
 use Yii;
+use yii\web\NotFoundHttpException;
 
 class ReportBoxWidgetController extends Controller
 {
