@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <img src="<?= $url ?>/bidashboard/images/BI.png" class="img-fluid w-50">
+                                    <img src="<?= $url ?>/images/BI.png" class="img-fluid w-50">
                                 </div>
                             </div>
                         </div>

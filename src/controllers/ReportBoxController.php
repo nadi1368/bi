@@ -2,27 +2,19 @@
 
 namespace ziaadini\bidashboard\controllers;
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Exception;
 use ziaadini\bidashboard\components\ExcelReport;
-use ziaadini\bidashboard\helpers\CoreHelper;
 use ziaadini\bidashboard\models\ReportAlert;
-use ziaadini\bidashboard\models\ReportBaseModel;
 use ziaadini\bidashboard\models\ReportBox;
-use ziaadini\bidashboard\models\ReportBoxWidgets;
-use ziaadini\bidashboard\models\ReportFiredAlert;
 use ziaadini\bidashboard\models\ReportWidget;
 use ziaadini\bidashboard\traits\AjaxValidationTrait;
 use ziaadini\bidashboard\traits\CoreTrait;
-use yii\base\Model;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\Response;
 use Yii;
-use ziaadini\bidashboard\widgets\Alert;
-use function PHPUnit\Framework\returnArgument;
+use yii\web\NotFoundHttpException;
 
 class ReportBoxController extends Controller
 {

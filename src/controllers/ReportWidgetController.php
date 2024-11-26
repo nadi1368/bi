@@ -2,11 +2,6 @@
 
 namespace ziaadini\bidashboard\controllers;
 
-use ziaadini\bidashboard\models\ReportBox;
-use ziaadini\bidashboard\models\ReportDashboard;
-use ziaadini\bidashboard\models\ReportBoxWidgets;
-use ziaadini\bidashboard\models\ReportPage;
-use ziaadini\bidashboard\models\ReportPageWidget;
 use ziaadini\bidashboard\models\ReportWidget;
 use ziaadini\bidashboard\models\ReportWidgetResult;
 use ziaadini\bidashboard\models\ReportWidgetSearch;

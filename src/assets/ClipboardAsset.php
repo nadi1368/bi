@@ -19,7 +19,11 @@ class ClipboardAsset extends AssetBundle
 {
     public $sourcePath = '@ziaadini/bidashboard/assets';
     public $js = [
-        'clipboard.min.js',
+        'js/pjax-utility.js',
+        'js/jquery.pjax.js',
+        'js/custom.min.js',
+        'js/utility.js',
+        'js/wordcloud.min.js',
     ];
     public $depends = [
         'yii\web\JqueryAsset',

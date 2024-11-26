@@ -34,18 +34,6 @@ use yii\web\View;
                 'class' => 'form-control rounded-md input-border'
             ])->label('توضیحات داشبورد' . ' ' . '<span class="text-danger">*</span>') ?>
         </div>
-        <?php if ($model->isNewRecord): ?>
-            <div class="col-4">
-                <?= $form->field($model, 'status')->widget(Select2::class, [
-                    'data' => ReportDashboard::itemAlias('Status'),
-                    'options' => [],
-                    'pluginOptions' => [
-                        'allowClear' => true,
-                        'initialize' => !$model->isNewRecord,
-                    ],
-                ]); ?>
-            </div>
-        <?php endif; ?>
     </div>
 
     <div class="d-flex justify-content-end">

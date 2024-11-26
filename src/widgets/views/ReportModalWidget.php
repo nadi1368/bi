@@ -2,18 +2,11 @@
 
 namespace ziaadini\bidashboard\widgets\views;
 
-use backend\assets\BiAssets;
 use Yii;
 use yii\bootstrap4\Modal;
 use yii\helpers\Url;
-use yii\web\View;
-use yii\widgets\Pjax;
 use yii\helpers\Html;
-use yii\bootstrap4\ActiveForm;
-use yii\helpers\ArrayHelper;
-
-$biAssets = BiAssets::register($this);
-$url = $biAssets->baseUrl;
+use yii\web\View;
 
 /**
  * @var $searchModel object
@@ -23,9 +16,11 @@ $url = $biAssets->baseUrl;
  * @var $searchModelFormName string
  * @var $queryParams array
  * @var $outputColumn array
- * @var $this View;
+ * @var View $this;
  */
 
+$url = Yii::$app->assetManager->getPublishedUrl('@ziaadini/bidashboard/assets');
+$this->registerJsFile($url . '/js/pjax-utility.js', ['depends' => [\yii\web\JqueryAsset::class]]);
 ?>
 
 <?= Html::a(

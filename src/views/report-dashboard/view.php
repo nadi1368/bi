@@ -2,18 +2,12 @@
 
 use ziaadini\bidashboard\widgets\Alert;
 use ziaadini\bidashboard\models\ReportDashboard;
-use ziaadini\bidashboard\models\ReportWidget;
 use ziaadini\bidashboard\models\ReportBox;
 use ziaadini\bidashboard\models\ReportBoxWidgets;
-use ziaadini\bidashboard\models\ReportYear;
 use yii\helpers\Html;
-use yii\helpers\Time;
 use yii\helpers\Url;
 use yii\web\View;
-use yii\widgets\DetailView;
 use yii\widgets\Pjax;
-use yii\widgets\ActiveForm;
-use yii\web\JsExpression;
 
 /**
  * @var View $this

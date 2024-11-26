@@ -2,24 +2,17 @@
 
 namespace ziaadini\bidashboard\controllers;
 
-use common\models\BaseModel;
-use ziaadini\bidashboard\models\ReportBaseModel;
 use ziaadini\bidashboard\models\ReportBox;
-use ziaadini\bidashboard\models\ReportBoxWidgets;
 use ziaadini\bidashboard\models\ReportDashboard;
-use ziaadini\bidashboard\models\ReportDashboardWidget;
-use ziaadini\bidashboard\models\ReportWidget;
 use ziaadini\bidashboard\models\ReportDashboardSearch;
 use ziaadini\bidashboard\traits\AjaxValidationTrait;
 use ziaadini\bidashboard\traits\CoreTrait;
-use yii\helpers\ArrayHelper;
-use yii\base\Model;
-use yii\db\Exception;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\Response;
 use Yii;
+use yii\web\NotFoundHttpException;
 
 class ReportDashboardController extends Controller
 {
