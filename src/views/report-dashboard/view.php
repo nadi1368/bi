@@ -109,7 +109,7 @@ $this->registerJs($script);
             </div>
 
             <!--  Charts  -->
-            <div class="" style="display:grid; grid-template-columns: 1fr 1fr;gap:1.5rem; padding:0 1rem;max-width:calc(100% - 15rem);">
+            <div class="" style="display:grid; grid-template-columns: 1fr 1fr;gap:1rem;">
                 <?php foreach ($charts as $index => $box): ?>
                     <?php Pjax::begin([
                         'id' => 'p-jax-report-dashboard-box-' . $box->id,
